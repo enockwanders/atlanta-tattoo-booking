@@ -16,5 +16,5 @@ The site does not display the studio's phone number or email. It collects the cl
 
 ## Client email updates
 
-The server can send a request receipt and booking status updates through Resend's HTTPS API. In the Render service's Environment settings, add `RESEND_API_KEY` and `EMAIL_FROM`. Keep the API key private and do not commit it. `EMAIL_FROM` must be an address from a verified sending domain in your Resend account. Email delivery stays off until both settings are present. Render's free web services block outbound SMTP, so this site uses the provider API over HTTPS instead.
+The website uses EmailJS with a connected personal email service such as Gmail. Create one EmailJS service and one template. Set the template recipient to `{{to_email}}`, subject to `{{subject}}`, and body to `Hello {{client_name}},\n\n{{message}}`. Add the service ID, template ID, and account public key to `email-config.js`. These are public browser identifiers; never put an email password or private key there. In EmailJS Domains, allow `https://iron-palm-booking.onrender.com`; add `http://localhost:8080` only for local testing. Personal mailbox services are suited to low-volume email and may enforce daily sending limits.
 
