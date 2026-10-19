@@ -14,3 +14,7 @@ Set a strong `ADMIN_PASSWORD` privately in Render. The private manager is at `/a
 
 The site does not display the studio's phone number or email. It collects the client's name, email address, and mobile number with an appointment request; these contact details are visible to a signed-in studio manager for follow-up. Customers get a request code and status key to check request status.
 
+## Client email updates
+
+The server can send a request receipt and booking status updates through Resend's HTTPS API. In the Render service's Environment settings, add `RESEND_API_KEY` and `EMAIL_FROM`. Keep the API key private and do not commit it. `EMAIL_FROM` must be an address from a verified sending domain in your Resend account. Email delivery stays off until both settings are present. Render's free web services block outbound SMTP, so this site uses the provider API over HTTPS instead.
+
