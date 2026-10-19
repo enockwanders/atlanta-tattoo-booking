@@ -3,7 +3,7 @@
 window.IRON_PALM_EMAIL = {
   serviceId: 'service_3d5e2im',
   templateId: 'template_4kzvvdv',
-  publicKey: 'zZ1RgNKCJhrDu7rWl'
+  publicKey: 'mg_pEpt-Olhvw39th'
 };
 
 window.ironPalmSendEmail = async function ({ to, subject, name, message }) {
@@ -21,4 +21,3 @@ window.ironPalmSendEmail = async function ({ to, subject, name, message }) {
     return false;
   }
 };
-
