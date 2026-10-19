@@ -1,7 +1,7 @@
 // Add the service ID, template ID, and public key from your EmailJS dashboard.
 // These are public browser identifiers. Never put an email password or private key here.
 window.IRON_PALM_EMAIL = {
-  serviceId: 'YOUR_EMAILJS_SERVICE_ID',
+  serviceId: 'service_3d5e2im',
   templateId: 'template_4kzvvdv',
   publicKey: 'IM6aA24S_qNbav2FZYIsY'
 };
