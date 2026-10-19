@@ -1,18 +1,16 @@
 # Iron Palm booking website
 
-## What is included
-A Node.js website with the public booking page and a password-protected studio manager at `/admin`.
+This is a full-stack Node.js website with a password-protected appointment manager.
 
-## Free hosting setup
-This repository includes a Render Blueprint configured for the free web service. Render provides a free `onrender.com` address, so no custom domain is needed.
+## Local run
 
-**Free hosting limitation:** booking records are stored on the server's temporary filesystem. They may be lost when the service restarts, redeploys, or spins down. Free Render services can also take about a minute to wake after inactivity. Do not rely on this version for permanent booking records.
+Run `.\Start-Website.ps1` in PowerShell. The booking page is at http://localhost:8080 and the manager at http://localhost:8080/admin. The server prints a generated admin password on its first start. Save it privately.
 
-## Publish
-1. Sign in to Render and choose **New → Blueprint**.
-2. Connect the GitHub repository `enockwanders/atlanta-tattoo-booking`.
-3. Set a strong value for `ADMIN_PASSWORD` when prompted. Keep it private.
-4. Create the service using the free plan.
-5. Open the URL Render gives you. The public site is at the root; the manager is at `/admin`.
+## Free hosting
 
-The site does not display or collect a business phone number or email. Customers receive a request code and private key to check their request status.
+The included `render.yaml` configures a free Render web service. Render provides an `onrender.com` address, so a custom domain is optional. The service uses temporary storage: booking records can be lost after a restart, redeploy, or idle spin-down. Use a persistent database before relying on this for long-term booking records.
+
+Set a strong `ADMIN_PASSWORD` privately in Render. The private manager is at `/admin`.
+
+The site does not display the studio's phone number or email. It collects the client's name, email address, and mobile number with an appointment request; these contact details are visible to a signed-in studio manager for follow-up. Customers get a request code and status key to check request status.
+
