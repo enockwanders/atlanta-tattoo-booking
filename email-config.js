@@ -2,7 +2,7 @@
 // These are public browser identifiers. Never put an email password or private key here.
 window.IRON_PALM_EMAIL = {
   serviceId: 'YOUR_EMAILJS_SERVICE_ID',
-  templateId: 'YOUR_EMAILJS_TEMPLATE_ID',
+  templateId: 'template_4kzvvdv',
   publicKey: 'IM6aA24S_qNbav2FZYIsY'
 };
 
